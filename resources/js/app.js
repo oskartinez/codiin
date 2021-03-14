@@ -12,6 +12,9 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
+import SelectNuevoExistenteComponent from './components/SelectNuevoExistenteComponent.vue';
+Vue.component('select-nuevo-existente-component', SelectNuevoExistenteComponent);
+
 const app = new Vue({
     el: '#app',
     methods: {

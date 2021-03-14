@@ -43,7 +43,7 @@ class OficinaExtSeeder extends Seeder
             'direccion'=> 'San Luis 544',
             'telefono'=> '544-21777',
             'email'=> 'aseletra@policia.chaco.gov.ar',
-            'id_responsable' => 2,
+            'id_responsable' => 1,
             'activadoPorCodigo' => true,
             'codigoActivacion'=> substr(bcrypt('DEPARTAMENTO DE ASESORIA LETRADA'), 0,8)
         ]);
