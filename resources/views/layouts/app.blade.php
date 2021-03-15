@@ -17,6 +17,7 @@
     <div id="app" class="h-100" >
         <b-navbar toggleable="sm" type="dark" variant="primary">
             <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+            <b-img src="{{ asset('images/logo-codiin-ico-png8.png') }}" fluid width="30" height="30" alt="Responsive image"  class="mr-2"></b-img>
 
             <b-navbar-brand href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
