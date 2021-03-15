@@ -78,16 +78,32 @@
                     <b-form-group>
                         <b-form-checkbox name="reservado" class="mt-2"                       
                         >
-                        Reservado
+                        Presentación con contenido de carácter RESERVADO 
                         </b-form-checkbox>
                     </b-form-group>
 
-                    <b-button type="submit" variant="primary">Ingresar</b-button>
-                    
-                    <b-button 
-                        href=""
-                        variant="link">Olvidaste tu contraseña?
-                    </b-button>
+                        <editor-html-component >
+                        </editor-html-component>
+                        
+
+
+                    <b-form-group label="Adjunto (pdf):">
+                        <b-form-file id="adjunto"></b-form-file>
+                    </b-form-group>
+
+                    <b-form-group 
+                                    label="Observaciones:"
+                                    label-for="observaciones"
+                                    >
+                        <b-form-textarea
+                            id="Observaciones" class="mb-2"
+                            rows="4"
+                        ></b-form-textarea>
+                    </b-form-group>
+
+
+                    <b-button type="submit" variant="primary">Guardar</b-button>
+                    <b-button type="submit" variant="secondary">Firmar y Enviar</b-button>
                     
 
 
