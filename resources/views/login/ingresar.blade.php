@@ -53,14 +53,6 @@
                         </b-form-input>
                     </b-form-group>
 
-                    <b-form-group>
-                        <b-form-checkbox name="remember" 
-                        {{ old('remember') ? 'checked="true"' : '' }}
-                        >
-                        Recordar sesión
-                        </b-form-checkbox>
-                    </b-form-group>
-
                     <b-button type="submit" variant="primary">Ingresar</b-button>
                     
                     <b-button 

@@ -24,8 +24,11 @@ Route::get('/registrar', function () {
 });
 
 // Presentaciones routes
-Route::get('/presentacion', function () {
+Route::get('/presentacion/alta', function () {
     return View::make('presentacion.alta');
+});
+Route::get('/presentacion/', function () {
+    return View::make('presentacion.listado');
 });
 
 Route::get('/ingresar', function () {

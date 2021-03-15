@@ -25,7 +25,14 @@ import SelectNuevoExistenteComponent from './components/SelectNuevoExistenteComp
 Vue.component('select-nuevo-existente-component', SelectNuevoExistenteComponent);
 import EditorHtmlComponent from './components/EditorHtmlComponent.vue';
 Vue.component('editor-html-component', EditorHtmlComponent);
-
+import TableListadoComponent from './components/TableListadoComponent.vue';
+Vue.component('table-listado-component', TableListadoComponent);
+import BuscadorComponent from './components/BuscadorComponent.vue';
+Vue.component('buscador-component', BuscadorComponent);
+import PagerComponent from './components/PagerComponent.vue';
+Vue.component('pager-component', PagerComponent);
+import MenuComponent from './components/MenuComponent.vue';
+Vue.component('menu-component', MenuComponent);
 
 
 const app = new Vue({

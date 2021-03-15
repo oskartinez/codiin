@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appmenu')
 
 @section('content')
 <b-container fluid>
@@ -85,8 +85,6 @@
                         <editor-html-component >
                         </editor-html-component>
                         
-
-
                     <b-form-group label="Adjunto (pdf):">
                         <b-form-file id="adjunto"></b-form-file>
                     </b-form-group>
@@ -101,15 +99,13 @@
                         ></b-form-textarea>
                     </b-form-group>
 
-
+                    <b-button type="submit" variant="outline-primary" href="{{ url('/presentacion') }}"><< Volver </b-button>
                     <b-button type="submit" variant="primary">Guardar</b-button>
                     <b-button type="submit" variant="secondary">Firmar y Enviar</b-button>
-                    
-
+   
 
                 </b-form>
-
-            </b-card>
+         </b-card>
         </b-col>
     </b-row>
 </b-container>

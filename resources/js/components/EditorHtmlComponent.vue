@@ -1,14 +1,16 @@
 <template>
-<b-form-group 
+<div style="height:560px">
+  <b-form-group 
                         label="Contenido de la presentación:"
                         label-for="contenido_presentacion"
                         
                         >
-                <div class="editor">
-                        <quill-editor ref="myTextEditor" v-model="contenido" :config="editorOption" id="contenido_presentacion" name="contenido_presentacion">
+                <div class="editor" style="height:400px">
+                        <quill-editor   ref="myTextEditor" v-model="contenido" :config="editorOption" id="contenido_presentacion" name="contenido_presentacion">
                         </quill-editor>
                 </div>
-</b-form-group>
+  </b-form-group>
+</div>
 </template>
 <script>
 
