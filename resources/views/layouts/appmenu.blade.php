@@ -17,6 +17,7 @@
     <div id="app" class="h-100" >
         <b-navbar toggleable="sm" type="dark" variant="primary">
             <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+            <b-img src="{{ asset('images/logo-codiin-ico-png24.png') }}" fluid width="30" height="30" alt="Responsive image"  class="mr-2"></b-img>
 
             <b-navbar-brand href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -25,22 +26,18 @@
             <b-collapse id="nav-text-collapse" is-nav>
                 <b-navbar-nav class="ml-auto">
                     @guest
-                    <b-nav-item href="{{ url('login') }}">Ingresar</b-nav-item>
-                    <b-nav-item href="{{ url('registrar') }}">Registrar</b-nav-item>
-                    @else
-                    <b-nav-item-dropdown text="" right>
-                        <b-dropdown-item href="#" @click="logout">
+                    
+                    <b-nav-item-dropdown text="Juan" right>
+                        <b-dropdown-item href="/login" @click="logout">
+                        <b-icon icon="power" aria-hidden="true"></b-icon> 
                         Cerrar Sesión
                         </b-dropdown-item>
                     </b-nav-item-dropdown>
 
-                    <form id="logout-form" action="" method="POST" >
-                                            {{ csrf_field() }}
-                                            <button type="submit">Cerrar</button>
-                    </form>
-
                     @endguest
                 </b-navbar-nav>
+
+                
             </b-collapse>
         </b-navbar>
         <menu-component>

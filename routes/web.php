@@ -15,6 +15,10 @@ use App\Http\Controllers\RegistroController;
 |
 */
 
+Route::get('/', function () {
+    return View::make('login.ingresar');
+});
+
 Route::get('/login', function () {
     return View::make('login.ingresar');
 });
@@ -28,8 +32,22 @@ Route::get('/presentacion/alta', function () {
     return View::make('presentacion.alta');
 });
 Route::get('/presentacion/', function () {
-    return View::make('presentacion.listado');
+    return View::make('presentacion.inicio');
 });
+
+Route::get('/presentacion/sinenviar', function () {
+    return View::make('presentacion.sinenviar');
+});
+
+Route::get('/presentacion/enviadas', function () {
+    return View::make('presentacion.enviadas');
+});
+
+// Oficinas routes
+Route::get('/oficina/datos', function () {
+    return View::make('oficina.datos');
+});
+
 
 Route::get('/ingresar', function () {
     var_dump( $results = DB::select('select * from UsuarioOfExt'));

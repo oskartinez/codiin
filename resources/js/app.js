@@ -29,10 +29,15 @@ import TableListadoComponent from './components/TableListadoComponent.vue';
 Vue.component('table-listado-component', TableListadoComponent);
 import BuscadorComponent from './components/BuscadorComponent.vue';
 Vue.component('buscador-component', BuscadorComponent);
+import BuscadorEnviadasComponent from './components/BuscadorEnviadasComponent.vue';
+Vue.component('buscador-enviadas-component', BuscadorEnviadasComponent);
 import PagerComponent from './components/PagerComponent.vue';
 Vue.component('pager-component', PagerComponent);
 import MenuComponent from './components/MenuComponent.vue';
 Vue.component('menu-component', MenuComponent);
+import TableListadoEnviadasComponent from './components/TableListadoEnviadasComponent.vue';
+Vue.component('table-listado-enviadas-component', TableListadoEnviadasComponent);
+
 
 
 const app = new Vue({

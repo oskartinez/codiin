@@ -101,7 +101,7 @@
                             type="text"
                             name="expte_judicial_buscar" 
                             maxlength ="50"
-                            class="mb-2 mr-sm-2 mb-sm-0"
+                            class="mb-2 ml-sm-2 mr-sm-2 mb-sm-0"
               >
                 </b-form-input>
               </b-form-group>

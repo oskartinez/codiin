@@ -100,7 +100,8 @@
                     </b-form-group>
 
                     <b-button type="submit" variant="outline-primary" href="{{ url('/presentacion') }}"><< Volver </b-button>
-                    <b-button type="submit" variant="primary">Guardar</b-button>
+                    <b-button type="submit" variant="primary">Guardar como borrador</b-button>
+                    <b-button type="submit" variant="primary">Elevar para su firma</b-button>
                     <b-button type="submit" variant="secondary">Firmar y Enviar</b-button>
    
 
