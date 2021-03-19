@@ -4,7 +4,7 @@
 <b-container fluid>
     <b-row align-h="center">
         <b-col cols="12">
-            <b-card title="Presentaciones SIN ENVIAR" class="my-3">
+            <b-card title="Presentaciones EN TRÁMITE" class="my-3">
                 @if ($errors->any())
                 <b-alert show variant="danger">
                     <ul class="mb-0">

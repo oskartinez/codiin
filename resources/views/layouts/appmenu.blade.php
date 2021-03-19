@@ -23,21 +23,14 @@
             {{ config('app.name', 'Laravel') }}
             </b-navbar-brand>
 
-            <b-collapse id="nav-text-collapse" is-nav>
+            <b-collapse id="navbar-toggle-collapse" is-nav>
                 <b-navbar-nav class="ml-auto">
-                    @guest
-                    
-                    <b-nav-item-dropdown text="Juan" right>
-                        <b-dropdown-item href="/login" @click="logout">
-                        <b-icon icon="power" aria-hidden="true"></b-icon> 
-                        Cerrar Sesión
-                        </b-dropdown-item>
-                    </b-nav-item-dropdown>
-
-                    @endguest
+                    <b-nav-item disabled >
+                        <span style="background: #6666; padding:3px; color:white">
+                         mrodriguez - DCCION DE JUZGAMIENTO ADMINISTRATIVO 
+                         </span>
+                    </b-nav-item>
                 </b-navbar-nav>
-
-                
             </b-collapse>
         </b-navbar>
         <menu-component>

@@ -37,6 +37,13 @@ import MenuComponent from './components/MenuComponent.vue';
 Vue.component('menu-component', MenuComponent);
 import TableListadoEnviadasComponent from './components/TableListadoEnviadasComponent.vue';
 Vue.component('table-listado-enviadas-component', TableListadoEnviadasComponent);
+import TablePersonalComponent from './components/TablePersonalComponent.vue';
+Vue.component('table-personal-component', TablePersonalComponent);
+
+import ItemIngresosOfJudicialComponent from './components/ItemIngresosOfJudicialComponent.vue';
+Vue.component('item-ingresos-of-judicial-component', ItemIngresosOfJudicialComponent);
+import ItemPresSinEnviarComponent from './components/ItemPresSinEnviarComponent.vue';
+Vue.component('item-pres-sin-enviar-component', ItemPresSinEnviarComponent);
 
 
 

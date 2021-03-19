@@ -19,32 +19,46 @@
                 <b-container class="bv-example-row">
                     <b-row>
                         <b-col>
-                        <h5>Recibidos</h5>
+                        <h5>En trámite...</h5>
                             <b-list-group>
-                                <b-list-group-item><b-icon icon="arrow-down-circle" aria-hidden="true"></b-icon> <b-button href="" variant="link"> SUAREZ, LOPEZ s/ DENUNCIA. . .</b-button></b-list-group-item>
-                                <b-list-group-item><b-icon icon="arrow-down-circle" aria-hidden="true"></b-icon> <b-button href="" variant="link">PEREZ, GOMEZ s/ SUP. INF. ART 15 CF...</b-button></b-list-group-item>
-                                <b-list-group-item><b-icon icon="arrow-down-circle" aria-hidden="true"></b-icon> <b-button href="" variant="link">SOSA, GONZALEZ s/ SUP. INF ART 80 CF...</b-button></b-list-group-item>
-                                <b-list-group-item class="text-right"><b-button  href="{{ url('/presentacion/recibidos') }}" variant="link">Ver todos ...</b-button></b-list-group-item>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+                                <item-pres-sin-enviar-component></item-pres-sin-enviar-component>
+
+                                
+                                <b-list-group-item class="text-right">
+                                        <b-button  href="{{ url('/presentacion/recibidos') }}" variant="link">Ver todos ...</b-button>
+                                </b-list-group-item>
+                                <b-list-group-item class="text-center">
+                                    <b-button variant="primary" href="{{ url('/presentacion/alta') }}">
+                                        <b-icon icon="file-earmark"></b-icon>
+                                        Nueva Presentaci&oacute;n
+                                    </b-button>
+                                </b-list-group-item>
                             </b-list-group>
                         </b-col>
                         <b-col>
-                        <h5>Sin enviar</h5>
+                        <h5>Ingresos desde una Oficina Judicial</h5>
                             <b-list-group>
-                                <b-list-group-item><b-icon icon="caret-right" aria-hidden="true"></b-icon> <b-button href="" variant="link"> SUAREZ, LOPEZ s/ DENUNCIA. . .</b-button></b-list-group-item>
-                                <b-list-group-item><b-icon icon="caret-right" aria-hidden="true"></b-icon> <b-button href="" variant="link">PEREZ, GOMEZ s/ SUP. INF. ART 15 CF...</b-button></b-list-group-item>
-                                <b-list-group-item><b-icon icon="caret-right" aria-hidden="true"></b-icon> <b-button href="" variant="link">SOSA, GONZALEZ s/ SUP. INF ART 80 CF...</b-button></b-list-group-item>
-                                <b-list-group-item class="text-right"><b-button  href="{{ url('/presentacion/sinenviar') }}" variant="link">Ver todos ...</b-button></b-list-group-item>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+                                <item-ingresos-of-judicial-component></item-ingresos-of-judicial-component>
+
+
+                                
+                                <b-list-group-item class="text-right"><b-button  href="{{ url('/presentacion/recibidos') }}" variant="link">Ver todos ...</b-button></b-list-group-item>
                             </b-list-group>
-
                         </b-col>
-
                     </b-row>
                 </b-container>
 
-                <b-button variant="primary" href="{{ url('/presentacion/alta') }}" class="mt-4">
-                <b-icon icon="file-earmark"></b-icon>
-                Nueva Presentaci&oacute;n
-                </b-button>
+                
 
             </b-card>
         </b-col>

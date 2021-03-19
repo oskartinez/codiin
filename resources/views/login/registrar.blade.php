@@ -91,7 +91,7 @@
                         </b-form-input>
                     </b-form-group>
                     <b-form-group 
-                                  label="Apellido:"
+                                  label="Apellido/s:"
                                   label-for="apellido"
                                   >
                         <b-form-input id="apellido"
@@ -103,7 +103,7 @@
                         </b-form-input>
                     </b-form-group>
                     <b-form-group 
-                                  label="Nombre:"
+                                  label="Nombre/s:"
                                   label-for="nombre"
                                   >
                         <b-form-input id="nombre"

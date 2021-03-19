@@ -47,6 +47,13 @@ Route::get('/presentacion/enviadas', function () {
 Route::get('/oficina/datos', function () {
     return View::make('oficina.datos');
 });
+Route::get('/oficina/accesos', function () {
+    return View::make('oficina.accesos');
+});
+Route::get('/oficina/nuevo', function () {
+    return View::make('oficina.nuevo');
+});
+
 
 
 Route::get('/ingresar', function () {
