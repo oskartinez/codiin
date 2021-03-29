@@ -20,6 +20,10 @@ import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 Vue.use(VueQuillEditor)
 
+import VueBootstrapTypeahead from 'vue-bootstrap-typeahead'
+// Global registration
+Vue.component('vue-bootstrap-typeahead', VueBootstrapTypeahead);
+
 
 import SelectNuevoExistenteComponent from './components/SelectNuevoExistenteComponent.vue';
 Vue.component('select-nuevo-existente-component', SelectNuevoExistenteComponent);
@@ -45,6 +49,9 @@ Vue.component('item-ingresos-of-judicial-component', ItemIngresosOfJudicialCompo
 import ItemPresSinEnviarComponent from './components/ItemPresSinEnviarComponent.vue';
 Vue.component('item-pres-sin-enviar-component', ItemPresSinEnviarComponent);
 
+// pruebas 
+import AutocomWikiComponent from './components/AutocomWikiComponent.vue';
+Vue.component('autocom-wiki-component', AutocomWikiComponent);
 
 
 const app = new Vue({

@@ -64,15 +64,16 @@ Route::get('/ingresar', function () {
 Route::post('/registro_envio', [RegistroController::class, 'registrar'])->name('registro_envio');
 
 
-Route::get('/test', function () {
+Route::get('/test-sigi2', function () {
     
         //$serverName = "(local)\sqlexpress";  
         
         /* Connect using Windows Authentication. */  
         try  
         {  
-        $conn = new PDO( "sqlsrv:server=127.0.0.1;Database=CODIIN_prueba", "sa", "genius");  
+        $conn = new PDO(env(CON1, ''), env(CON1US,''), env(CON1PW,''));  
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+        echo "conexion exitosa";
         }  
         catch(Exception $e)  
         {   
@@ -80,7 +81,33 @@ Route::get('/test', function () {
         }  
 });
 
+
+Route::get('/test-sigi', function () {
+    
+    //$serverName = "(local)\sqlexpress";  
+    
+    /* Connect using Windows Authentication. */  
+    try  
+    {  
+        $conn = new PDO(env(CON2,''), env(CON2US,''), env(CON2PW,''));  
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+    }  
+    catch(Exception $e)  
+    {   
+    die( print_r( $e->getMessage() ) );   
+    }  
+});
+
+// APIS
+Route::get('/api/dependencias', 'DependenciasController@index');
+
+
+// pruebas
 Route::get('/phpinfo', function () {
     
     phpinfo();
+});
+Route::get('/autocomplete', function () {
+    
+    return View::make('prueba.autocomplete');
 });
