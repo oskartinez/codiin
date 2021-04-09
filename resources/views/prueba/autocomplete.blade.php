@@ -23,8 +23,6 @@
                     </b-alert>
                 @endif
                 
-                <div> 
-
                 <autocom-wiki-component>
                 /<autocom-wiki-component>
 

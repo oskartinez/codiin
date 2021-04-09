@@ -49,6 +49,9 @@ Vue.component('item-ingresos-of-judicial-component', ItemIngresosOfJudicialCompo
 import ItemPresSinEnviarComponent from './components/ItemPresSinEnviarComponent.vue';
 Vue.component('item-pres-sin-enviar-component', ItemPresSinEnviarComponent);
 
+import AcDependenciasComponent from './components/AcDependenciasComponent.vue';
+Vue.component('ac-dependencias-component', AcDependenciasComponent); 
+
 // pruebas 
 import AutocomWikiComponent from './components/AutocomWikiComponent.vue';
 Vue.component('autocom-wiki-component', AutocomWikiComponent);

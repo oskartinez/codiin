@@ -111,3 +111,37 @@ Route::get('/autocomplete', function () {
     
     return View::make('prueba.autocomplete');
 });
+
+
+// REGISTRAR
+Route::get('/registrar_1', function () {
+    
+    // TODO: controlar que no se encuentre logueado antes
+
+    return View::make('registrar.paso1');
+});
+Route::post('/registrar_1', 'RegistroController@registrar_1')->name('registrar_1');
+
+
+
+// prueba captcha
+// Route::any('captcha-test', function() {
+//     if (request()->getMethod() == 'POST') {
+//         $rules = ['captcha' => 'required|captcha'];
+//         $validator = validator()->make(request()->all(), $rules);
+//         if ($validator->fails()) {
+//             echo '<p style="color: #ff0000;">Incorrect!</p>';
+//             //echo request();
+//         } else {
+//             echo '<p style="color: #00ff30;">Matched :)</p>';
+//         }
+//     }
+
+//     $form = '<form method="post" action="captcha-test">';
+//     $form .= '<input type="hidden" name="_token" value="' . csrf_token() . '">';
+//     $form .= '<p>' . captcha_img() . '</p>';
+//     $form .= '<p><input type="text" name="captcha"></p>';
+//     $form .= '<p><button type="submit" name="check">Check</button></p>';
+//     $form .= '</form>';
+//     return $form;
+// });

@@ -1,12 +1,18 @@
 <template>
 <div>
-          <vue-bootstrap-typeahead @hit="onArticuloSeleccionado" :serializer="serializarValor" @input="buscarArticulos"
-       v-model="busqueda" :data="dependencias" placeholder="Busca algo en la Wikipedia" />
-    
-        <div class="mt-2 alert alert-success">
-        Artículo seleccionado es:
-        {{ elementosSeleccionado}}
-        </div> 
+	<b-form-group 
+		label="Nombre de la Oficina:"
+		label-for="wiki"
+		>
+                    
+        <vue-bootstrap-typeahead @hit="onArticuloSeleccionado" :serializer="serializarValor" @input="buscarArticulos" id="wiki"
+		       v-model="busqueda" :data="dependencias" />
+	</b-form-group>
+
+	<div class="mt-2 alert alert-success">
+		Artículo seleccionado es:
+		{{ elementosSeleccionado}}
+	</div> 
 </div>
 </template>
 <script>
@@ -52,7 +58,6 @@
 			this.elementosSeleccionado = dependencias;
 		}
 	}
-
 
   }
 </script>
