@@ -12,6 +12,19 @@
 		Dependencia seleccionada es:
 		{{ elementosSeleccionado}}
 	</div> 
+	<b-form-group 
+				label="Código de Oficina:"
+				label-for="codigo_oficina"
+				>
+		<b-form-input id="codigo_oficina"
+					type="text"
+					v-model="codigoOficina"
+					name="codigo_oficina" 
+					disabled
+					maxlength ="10"
+					>
+		</b-form-input>
+	</b-form-group>
 </div>
 </template>
 <script>
@@ -21,6 +34,7 @@
 		busqueda: "",
 		dependencias: [],
 		elementosSeleccionado: {},
+		codigoOficina: ''
 	}),
 	methods: {
 		// Función que se invoca cuando el texto de búsqueda cambia
@@ -28,7 +42,7 @@
 			// La búsqueda como string. La tomamos del campo de texto
 			const busqueda = this.busqueda;
 			// Hacemos la petición a nuestra API pasándole la búsqueda. En este caso consulto la wikipedia
-			const respuesta = await fetch(`/api/dependencias`);
+			const respuesta = await fetch('/api/dependencias');
 
             let dep = await respuesta.text();
             
@@ -43,10 +57,11 @@
 		},
 		// Función que convierte el objeto a cadena. Es llamado para mostrarse en la lista
 		serializarValor(dependencias) {
-			return  dependencias.id + " - " + dependencias.nombre;
+			return  dependencias.s015_nombre;
 		},
 		onDependenciaSeleccionada(dependencias) {
 			this.elementosSeleccionado = dependencias;
+			this.codigoOficina = dependencias.s015_dependencia;
 		}
 	}
 

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistroController;
 
+use GuzzleHttp\Client;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -122,6 +124,19 @@ Route::get('/registrar_1', function () {
 });
 Route::post('/registrar_1', 'RegistroController@registrar_1')->name('registrar_1');
 
+
+// PROBAMOS CLIENTE REST API
+Route::get('/clienterest', function (GuzzleHttp\Client $client) {
+    $curl = curl_init();
+    curl_setopt_array($curl, [
+        CURLOPT_RETURNTRANSFER => 1,
+        CURLOPT_URL => 'http://127.0.0.1:8080/dependencias',
+        CURLOPT_PROXY => ''
+        ]);
+    $result = curl_exec($curl);
+
+    return $result;
+});
 
 
 // prueba captcha

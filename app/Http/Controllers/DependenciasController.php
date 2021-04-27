@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
+
 
 
 class Dependencia {
@@ -22,22 +24,36 @@ class DependenciasController extends Controller
     public function index(Request $request)
     {
 
-           
-                    
-        $dep1 = new Dependencia();
-        $dep1->id = 1;
-        $dep1->nombre = "COMISARIA 1";
-                            
-        $dep2 = new Dependencia();
-        $dep2->id = 2;
-        $dep2->nombre = "COMISARIA 2";
+        
+
+        // Create a client with a base URI
+        $client = new Client([
+            'base_uri' => 'http://localhost:8080/',
+            'timeout'  => 5.0,
+            'proxy' => ''
+            ]);
+        // Send a request to https://foo.com/api/test
+        $response = $client->request('GET', 'dependencias',
+            [
+                'headers' => [
+                    'Accept'     => 'application/json',
+                'http_errors'=> true
+                ]
+            ]);
+
+        return response()->json(json_decode($response->getBody()));
+
+        
 
 
-         //  echo json_encode($articulo);
-        $data = array(
-            $dep1, $dep2
-          
-        );
-        return $data;
+// $response = $client->request('GET', "http://localhost:8080/dependencias");
+
+//         $data = json_decode($response->getBody());
+
+
+//         dd($data);
+
+        //return $data;
+
     }
 }

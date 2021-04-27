@@ -3,7 +3,7 @@
 @section('content')
 <b-container>
     <b-row align-h="center">
-        <b-col cols="8">
+        <b-col cols="10">
 
              
             <b-card title="Registrar nueva Oficina - Unidad Policial" class="my-3">
@@ -26,6 +26,7 @@
                     <b-alert show variant="success">
                         Seleccione su oficina entre las oficinas disponibles:
                     </b-alert>
+
                     <ac-dependencias-component>
                     </ac-dependencias-component>
 
@@ -37,6 +38,19 @@
                         <b-form-input id="direccion"
                                     type="text"
                                     name="direccion" 
+                                    required
+                                    maxlength ="80"
+                                    >
+                        </b-form-input>
+                    </b-form-group>
+
+                    <b-form-group 
+                                label="Localidad:"
+                                label-for="localidad"
+                                >
+                        <b-form-input id="localidad"
+                                    type="text"
+                                    name="localidad" 
                                     required
                                     maxlength ="80"
                                     >
@@ -161,7 +175,7 @@
                                       type="text"
                                       name="numero_policial" 
                                       maxlength ="12"
-                                      required
+                                      
                         >
                         </b-form-input>
                     </b-form-group>
