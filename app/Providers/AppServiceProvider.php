@@ -17,8 +17,14 @@ class AppServiceProvider extends ServiceProvider
     {
         // REGISTRAMOS EL CLIENTE REST-API
         $baseUrl = env('API_ENDPOINT');
-        $this->app->singleton(Client::class, function($app) use ($baseUrl) {
-            return new Client();
+        $proxy = env('API_PROXY', '');
+        $this->app->singleton(Client::class, function($app) use ($baseUrl, $proxy) {
+            return new Client(
+                [
+                    'base_uri' => $baseUrl,
+                    'proxy' => $proxy
+                    ]
+            );
         });
     
 

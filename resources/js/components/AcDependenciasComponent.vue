@@ -42,7 +42,7 @@
 			// La búsqueda como string. La tomamos del campo de texto
 			const busqueda = this.busqueda;
 			// Hacemos la petición a nuestra API pasándole la búsqueda. En este caso consulto la wikipedia
-			const respuesta = await fetch('/api/dependencias');
+			const respuesta = await fetch(`/api/dependencias/${busqueda}`);
 
             let dep = await respuesta.text();
             

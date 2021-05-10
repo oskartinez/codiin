@@ -102,6 +102,7 @@ Route::get('/test-sigi', function () {
 
 // APIS
 Route::get('/api/dependencias', 'DependenciasController@index');
+Route::get('/api/dependencias/{id}', 'DependenciasController@find');
 
 
 // pruebas
